@@ -71,3 +71,18 @@ address{
     right: 0;
     z-index: 1;
 }
+
+.modal-header{
+    background: $background-dark;
+}
+
+.modal-body{
+    background: $background-pale;
+}
+
+.modal-header{
+    color: floralwhite;
+    button{
+        color: floralwhite;
+    }
+}
