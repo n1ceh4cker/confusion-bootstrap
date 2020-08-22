@@ -1,0 +1,73 @@
+$light-grey: #ddd;
+$background-dark: #512da8;
+$background-light: #9575cd;
+$background-pale: #d1c4e9;
+$carousel-item-height: 300px;
+
+@mixin zero-margin($pad-up-down: 0px, $pad-left-right: 0px){
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+body{
+    padding-top: 50px;
+    z-index: 0;
+}
+
+.navbar-dark{
+    background-color: $background-dark;
+}
+
+.row-header{
+    @include zero-margin();
+}
+
+.row-content{
+    @include zero-margin(50px, 0px);
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
+.footer{
+    background-color: $background-pale;
+    @include zero-margin(20px, 0px);
+}
+
+.jumbotron{
+    @include zero-margin(70px, 30px);
+    background: $background-light;
+    color: floralwhite;
+}
+
+address{
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;;
+}
+
+.tab-content{
+    border-left: 1px solid $light-grey;
+    border-right: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    padding: 10px;
+}
+
+.carousel{
+    background: $background-dark;
+    .carousel-item{
+        height: $carousel-item-height;
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-height: 300px;
+        }
+    }
+}
+
+#carouselButton{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
