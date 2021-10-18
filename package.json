@@ -14,13 +14,17 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin contactus.html -d dist --htmlmin -o dist/contactus.html",
-    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cssmin": "^0.4.3",
+    "gh-pages": "^3.2.3",
     "htmlmin": "0.0.7",
+    "imagemin": "^8.0.1",
     "lite-server": "^2.3.0",
     "node-sass": "^4.14.1",
     "onchange": "^3.3.0",
